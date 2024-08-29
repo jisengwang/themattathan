@@ -1,97 +1,54 @@
-/* Import Google Font */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
-/* Basic Styles */
+/* General Styles */
 body {
-    font-family: 'Bricolage Grotesque', sans-serif; 
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    color: #333;
+    background-color: #f8f8f8;
     margin: 0;
-    padding: 0;
-    background-color: #f8f8f8; /* Light background */
-    color: #333; /* Dark text for contrast */
-    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 /* Header Styles */
 header {
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 1rem 0;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    text-align: center; /* Center the navigation */
+    margin: 0;
 }
 
-nav li {
-    display: inline-block; /* Make list items horizontal */
-    margin: 0 10px;
+header nav li {
+    display: inline;
+    margin-right: 2rem;
 }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600; 
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+/* Bauhaus-Inspired Styles */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-nav a:hover {
-    color: #555; 
-}
-
-/* Hero Section Styles */
 .hero {
-    text-align: center;
-    padding: 100px 0;
-    background-color: #f0f0f0; /* Slightly darker background */
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700; /* Bold heading */
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #4CAF50; /* Example button color */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #45a049;
-}
-
-/* Featured Fonts Section Styles */
-.featured-fonts {
-    padding: 50px 0;
+    background-color: #eee;
+    padding: 4rem 0;
     text-align: center;
 }
 
-.featured-fonts h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+/* Add more styles for other sections as needed */
+
+/* Example of a font style */
+.font-bold {
     font-weight: 700;
-}
-
-/* ... (Add styles for font cards here) ... */
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
 }
