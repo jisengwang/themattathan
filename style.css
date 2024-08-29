@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif; /* Or any similar font */
+    background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow */
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 600; /* Slightly bolder font */
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #a0522d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #8b4523;
+}
+
+.square {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
