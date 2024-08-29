@@ -4,66 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Design Studio</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
-
-        body {
-            font-family: 'Bricolage Grotesque', sans-serif;
-            font-weight: 400;
-            color: #333;
-            background-color: #f8f8f8;
-            margin: 0;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Bricolage Grotesque', sans-serif;
-            font-weight: 700;
-        }
-
-        /* Basic Bauhaus Styling */
-        .container {
-            max-width: 960px;
-            padding: 20px;
-        }
-
-        /* Customize further as per your Bauhaus design */
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="container">
-        <h1>Font Design Studio</h1>
-        <p>Your tagline here.</p>
-
-        <h2>Our Fonts</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <p class="bricolage-grotesque-bold">Bricolage Grotesque Bold</p>
-                <!-- Add font samples and descriptions -->
-            </div>
-            <div class="col-md-4">
-                <p class="bricolage-grotesque-regular">Bricolage Grotesque Regular</p>
-                <!-- Add font samples and descriptions -->
-            </div>
-            <div class="col-md-4">
-                <p class="bricolage-grotesque-light">Bricolage Grotesque Light</p>
-                <!-- Add font samples and descriptions -->
-            </div>
+    <header>
+        <div class="container">
+            <h1>Font Design Studio</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Our Work</a></li>
+                    <li><a href="post.html">Posts</a></li>
+                    <li><a href="license.html">Licenses</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <h2>About Us</h2>
-        <p>Write about your studio here.</p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Explore Unique Font Designs</h2>
+                <p>Discover a curated selection of fonts crafted with passion and precision.</p>
+            </div>
+        </section>
+        <section class="featured-fonts">
+            <div class="container">
+                <h2>Featured Fonts</h2>
+                <!-- Font previews will be loaded here via JavaScript -->
+            </div>
+        </section>
+    </main>
 
-        <h2>Contact</h2>
-        <p>Your contact information here.</p>
-    </div>
+    <footer>
+        <div class="container">
+            <p>© 2023 Font Design Studio</p>
+        </div>
+    </footer>
 
-    <!-- Bootstrap JS (Optional) -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
