@@ -4,7 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Design Studio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 400;
+            color: #333;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            padding: 1rem 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav li {
+            display: inline;
+            margin-right: 2rem;
+        }
+
+        /* Bauhaus-Inspired Styles */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background-color: #eee;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .work-list .designer,
+        .post-list .post,
+        .team .team-member {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-list .designer img,
+        .post-list .post img,
+        .team .team-member img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-fonts .font-preview {
+            display: inline-block;
+            width: calc(33.33% - 1rem);
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        /* Example of a font style */
+        .font-bold {
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,28 +91,104 @@
             <h1>Font Design Studio</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="work.html">Our Work</a></li>
-                    <li><a href="post.html">Posts</a></li>
-                    <li><a href="license.html">Licenses</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#work">Our Work</a></li>
+                    <li><a href="#posts">Posts</a></li>
+                    <li><a href="#licenses">Licenses</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <section id="home" class="hero">
             <div class="container">
                 <h2>Explore Unique Font Designs</h2>
                 <p>Discover a curated selection of fonts crafted with passion and precision.</p>
             </div>
         </section>
-        <section class="featured-fonts">
+
+        <section id="work" class="work-list">
             <div class="container">
-                <h2>Featured Fonts</h2>
-                <!-- Font previews will be loaded here via JavaScript -->
+                <h2>Our Work</h2>
+                <div class="designer">
+                    <img src="designer1.jpg" alt="Designer Thumbnail">
+                    <h3>Designer Name 1</h3>
+                    <p>Short description of designer 1's work.</p>
+                    <a href="#" class="view-portfolio">View Portfolio</a>
+                </div>
+                <div class="designer">
+                    <img src="designer2.jpg" alt="Designer Thumbnail">
+                    <h3>Designer Name 2</h3>
+                    <p>Short description of designer 2's work.</p>
+                    <a href="#" class="view-portfolio">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="posts" class="post-list">
+            <div class="container">
+                <h2>Recent Posts</h2>
+                <div class="post">
+                    <img src="thumb1.jpg" alt="Post Thumbnail">
+                    <h3>Post Title 1</h3>
+                    <p>Short description of the post.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="post">
+                    <img src="thumb2.jpg" alt="Post Thumbnail">
+                    <h3>Post Title 2</h3>
+                    <p>Short description of the post.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="licenses" class="license-list">
+            <div class="container">
+                <h2>Font Licenses</h2>
+                <ul>
+                    <li>Font 1 - License Details</li>
+                    <li>Font 2 - License Details</li>
+                    <li>Font 3 - License Details</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="about" class="team">
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="team-member">
+                    <img src="team1.jpg" alt="Team Member Photo">
+                    <h3>Member Name 1</h3>
+                    <p>Role/Description</p>
+                </div>
+                <div class="team-member">
+                    <img src="team2.jpg" alt="Team Member Photo">
+                    <h3>Member Name 2</h3>
+                    <p>Role/Description</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea><br><br>
+
+                    <input type="submit" value="Send">
+                </form>
             </div>
         </section>
     </main>
@@ -44,6 +199,24 @@
         </div>
     </footer>
 
-    <script src="script.js"></script> 
+
+    <script>
+      // Example: Fetch and display font previews
+      fetch('fonts.json')
+          .then(response => response.json())
+          .then(fonts => {
+              const featuredFontsContainer = document.querySelector('.featured-fonts .container');
+              fonts.forEach(font => {
+                  const fontPreview = `
+                      <div class="font-preview">
+                          <img src="${font.thumbnail}" alt="${font.name}">
+                          <h3>${font.name}</h3>
+                          <p>${font.description}</p>
+                      </div>
+                  `;
+                  featuredFontsContainer.innerHTML += fontPreview;
+              });
+          }); 
+    </script>
 </body>
-</html>
+</html> 
