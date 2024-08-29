@@ -31,7 +31,7 @@
         header {
             background-color: #fff;
             padding: 1rem 0;
-            width: 100%; 
+            width: 100%;
             position: fixed; /* Fix the header to the top of the page */
             top: 0;
             z-index: 10; /* Ensure header is on top */
@@ -49,7 +49,17 @@
             margin: 0 2rem;
         }
 
-        /* Bauhaus-Inspired Styles */
+
+        /* Main Content Styles */
+        main {
+            flex-grow: 1; /* Allow the main content to grow */
+            padding: 2rem; /* Add some padding to the main content */
+        }
+
+        section {
+            margin-bottom: 2rem; 
+        }
+
         .container {
             max-width: 960px;
             margin: 0 auto;
@@ -66,11 +76,22 @@
             justify-content: center; /* Horizontally center content */
         }
 
+        .work-list, 
+        .post-list,
+        .team,
+        .contact,
+        .license-list {
+            margin-bottom: 2rem; 
+            padding: 2rem; 
+            background-color: #fff;
+            border-radius: 5px; /* Optional rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+        }
+
 
         .work-list .designer,
         .post-list .post,
         .team .team-member {
-            border: 1px solid #ddd;
             padding: 1rem;
             margin-bottom: 1rem;
             width: 100%; 
@@ -104,7 +125,7 @@
         /* Slideshow Styles */
         .slideshow-container {
             width: 100%;
-            height: 100%;
+            height: 400px; /* Adjust as needed */
             position: relative;
             overflow: hidden; 
         }
@@ -113,14 +134,12 @@
             width: 100%;
             height: 100%;
             display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .slideshow-image {
             width: 100%;
             height: auto;
-            display: block;
+            display: none;
             transition: opacity 0.5s ease-in-out;
         }
 
@@ -169,10 +188,6 @@
             <img class="slideshow-image fade" src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Slide 1">
             <img class="slideshow-image fade" src="thumb1.jpg" alt="Slide 2">
             <img class="slideshow-image fade" src="thumb2.jpg" alt="Slide 3">
-            <img class="slideshow-image fade" src="team1.jpg" alt="Slide 4">
-            <img class="slideshow-image fade" src="team2.jpg" alt="Slide 5">
-            <img class="slideshow-image fade" src="designer1.jpg" alt="Slide 6">
-            <img class="slideshow-image fade" src="designer2.jpg" alt="Slide 7">
         </div>
         <div class="slideshow-controls">
             <button onclick="plusSlides(-1)">❮</button>
@@ -181,11 +196,23 @@
     </section>
 
     <main>
+
         <section id="work" class="work-list">
             <div class="container">
                 <h2>Our Work</h2>
+                <div class="slideshow-container">
+                    <div class="slideshow-content">
+                        <img class="slideshow-image fade" src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Slide 1">
+                        <img class="slideshow-image fade" src="thumb1.jpg" alt="Slide 2">
+                        <img class="slideshow-image fade" src="thumb2.jpg" alt="Slide 3">
+                    </div>
+                    <div class="slideshow-controls">
+                        <button onclick="plusSlidesWork(-1)">❮</button>
+                        <button onclick="plusSlidesWork(1)">❯</button>
+                    </div>
+                </div>
+
                 <div class="designer">
-                    <img src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Project Thumbnail">
                     <h3>Midmai Pro</h3>
                     <p>
                         <strong>Font Name:</strong> Midmai Pro<br>
@@ -197,7 +224,6 @@
                     </p>
                     <a href="#" class="view-portfolio">View Portfolio</a>
                 </div>
-                <!-- Add more project information here -->
             </div>
         </section>
 
@@ -206,13 +232,13 @@
             <div class="container">
                 <h2>Recent Posts</h2>
                 <div class="post">
-                    <img src="thumb1.jpg" alt="Post Thumbnail">
+                    <img src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Post Thumbnail">
                     <h3>Post Title 1</h3>
                     <p>Short description of the post.</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
                 <div class="post">
-                    <img src="thumb2.jpg" alt="Post Thumbnail">
+                    <img src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Post Thumbnail">
                     <h3>Post Title 2</h3>
                     <p>Short description of the post.</p>
                     <a href="#" class="read-more">Read More</a>
@@ -235,12 +261,12 @@
             <div class="container">
                 <h2>Our Team</h2>
                 <div class="team-member">
-                    <img src="team1.jpg" alt="Team Member Photo">
+                    <img src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Team Member Photo">
                     <h3>Member Name 1</h3>
                     <p>Role/Description</p>
                 </div>
                 <div class="team-member">
-                    <img src="team2.jpg" alt="Team Member Photo">
+                    <img src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Team Member Photo">
                     <h3>Member Name 2</h3>
                     <p>Role/Description</p>
                 </div>
@@ -288,6 +314,5 @@
         function showSlides() {
             let i;
             let slides = document.getElementsByClassName("slideshow-image");
-            let dots = document.getElementsByClassName("dot");
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[
