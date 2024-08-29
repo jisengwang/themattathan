@@ -3,223 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqk1w27T/bH+DJwOwY5o+iqq+s210lUJDwM+yZypK+FWf/T2KlXhOP9WXQ+CxclHCUx8gbE4/M=")
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Design Technologist Club Newsletter</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #111;
-            color: #fff;
-        }
-
-        header {
-            background-color: #111;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav {
-            background-color: #111;
-            padding: 10px 0;
+            font-family: sans-serif;
+            background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
             display: flex;
             justify-content: center;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav li {
-            display: inline-block;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .hero {
-            position: relative;
-            height: 50vh;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
-
-        .hero-content h2 {
-            font-size: 4em;
-            margin-bottom: 10px;
-        }
-
-        .hero-content p {
-            font-size: 1.5em;
-            line-height: 1.5;
-        }
-
-        .hero-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        footer {
-            background-color: #111;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .btn {
-            background-color: #fff;
-            color: #111;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #ddd;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .social-links i {
-            font-size: 1.5em;
+            min-height: 100vh;
+            margin: 0;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        button[type="submit"] {
+            background-color: #a0522d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #8b4523;
+        }
+
+        .square {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <div>
-            <h1>Your Name</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Your Headline Here</h2>
-                <p>A brief description of what you do.</p>
-                <a href="#" class="btn">Learn More</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/1920x1080" alt="Hero Image">
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Write a brief introduction about yourself, your background, and your interests in web development.
-                Mention any relevant experience or skills you possess.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <!-- Add more skills as needed -->
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>
-                Showcase your projects. You can use images, brief descriptions, and links to repositories or live demos.
-            </p>
-            <div class="project-list">
-                <!-- Add project cards here -->
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                Provide your contact information, such as email address, social media links, or a contact form.
-            </p>
-            <p>Email: your.email@example.com</p>
-            <div class="social-links">
-                <a href="https://github.com/your-username"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/your-linkedin-profile"><i class="fab fa-linkedin-in"></i></a>
-                <!-- Add other social media icons as needed -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2023 Your Name. All rights reserved.</p>
-    </footer>
-
+    <div class="container">
+        <h2><span class="square"></span>Design Technologist Club Newsletter</h2>
+        <p>Join Design Technologist Club and receive technology news, manuals, tips and tricks</p>
+        <form>
+            <input type="email" placeholder="E-mail" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
 </body>
-
 </html>
