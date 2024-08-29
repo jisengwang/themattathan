@@ -15,6 +15,10 @@
             color: #333;
             background-color: #f8f8f8;
             margin: 0;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+            height: 100vh; /* Make the body fill the viewport height */
+            display: flex;
+            flex-direction: column; /* Enable vertical stacking of sections */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -27,17 +31,22 @@
         header {
             background-color: #fff;
             padding: 1rem 0;
+            width: 100%; 
+            position: fixed; /* Fix the header to the top of the page */
+            top: 0;
+            z-index: 10; /* Ensure header is on top */
         }
 
         header nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
+            text-align: center;
         }
 
         header nav li {
             display: inline;
-            margin-right: 2rem;
+            margin: 0 2rem;
         }
 
         /* Bauhaus-Inspired Styles */
@@ -51,7 +60,12 @@
             background-color: #eee;
             padding: 4rem 0;
             text-align: center;
+            flex-grow: 1; /* Take up available space */
+            display: flex;
+            align-items: center; /* Vertically center content */
+            justify-content: center; /* Horizontally center content */
         }
+
 
         .work-list .designer,
         .post-list .post,
@@ -59,6 +73,8 @@
             border: 1px solid #ddd;
             padding: 1rem;
             margin-bottom: 1rem;
+            width: 100%; 
+            box-sizing: border-box;
         }
 
         .work-list .designer img,
@@ -83,6 +99,51 @@
         .font-bold {
             font-weight: 700;
         }
+
+
+        /* Slideshow Styles */
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden; 
+        }
+
+        .slideshow-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slideshow-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade {
+            opacity: 0;
+        }
+
+        /* Navigation */
+        .slideshow-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .slideshow-controls button {
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -102,14 +163,24 @@
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Explore Unique Font Designs</h2>
-                <p>Discover a curated selection of fonts crafted with passion and precision.</p>
-            </div>
-        </section>
 
+    <section class="slideshow-container" id="home">
+        <div class="slideshow-content">
+            <img class="slideshow-image fade" src="https://cdn.dribbble.com/users/7071016/screenshots/15661955/type_specimen_poster_final.jpg" alt="Slide 1">
+            <img class="slideshow-image fade" src="thumb1.jpg" alt="Slide 2">
+            <img class="slideshow-image fade" src="thumb2.jpg" alt="Slide 3">
+            <img class="slideshow-image fade" src="team1.jpg" alt="Slide 4">
+            <img class="slideshow-image fade" src="team2.jpg" alt="Slide 5">
+            <img class="slideshow-image fade" src="designer1.jpg" alt="Slide 6">
+            <img class="slideshow-image fade" src="designer2.jpg" alt="Slide 7">
+        </div>
+        <div class="slideshow-controls">
+            <button onclick="plusSlides(-1)">❮</button>
+            <button onclick="plusSlides(1)">❯</button>
+        </div>
+    </section>
+
+    <main>
         <section id="work" class="work-list">
             <div class="container">
                 <h2>Our Work</h2>
@@ -203,22 +274,20 @@
 
 
     <script>
-      // Example: Fetch and display font previews
-      fetch('fonts.json')
-          .then(response => response.json())
-          .then(fonts => {
-              const featuredFontsContainer = document.querySelector('.featured-fonts .container');
-              fonts.forEach(font => {
-                  const fontPreview = `
-                      <div class="font-preview">
-                          <img src="${font.thumbnail}" alt="${font.name}">
-                          <h3>${font.name}</h3>
-                          <p>${font.description}</p>
-                      </div>
-                  `;
-                  featuredFontsContainer.innerHTML += fontPreview;
-              });
-          }); 
-    </script>
-</body>
-</html> 
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slideshow-image");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
