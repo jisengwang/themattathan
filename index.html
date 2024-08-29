@@ -1,76 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Opossum Search</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqk1w27T/bH+DJwOwY5o+iqq+s210lUJDwM+yZypK+FWf/T2KlXhOP9WXQ+CxclHCUx8gbE4/M=")
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
-.header {
-  background-color: #fff;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-}
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-.logo {
-  float: left;
-  margin-right: 20px;
-}
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
 
-.logo img {
-  height: 50px;
-}
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
 
-.search-box {
-  float: left;
-  width: 500px;
-}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-.search-box input[type=text] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
 
-.search-box button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #eee;
-}
-</style>
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project {
+            width: 300px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Software Engineer | [Your Speciality]</p>
+    </header>
 
-<div class="header">
-  <div class="logo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Opossum_2.jpg/292px-Opossum_2.jpg" alt="Opossum Logo">
-  </div>
-  <div class="search-box">
-    <form action="https://www.google.com/search" method="get">
-      <input type="text" name="q" placeholder="Search the web with opossums...">
-      <button type="submit">Search</button>
-    </form>
-  </div>
-</div>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<div class="footer">
-  Powered by opossum search
-</div>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Write a brief introduction about yourself, your background, and your interests in web development.
+                Mention any relevant experience or skills you possess.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>
+                List your key technical skills, including programming languages, frameworks, and tools.
+                You can use icons or bullet points for better visualization.
+            </p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Git</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>
+                Showcase your projects. You can use images, brief descriptions, and links to repositories or live demos.
+            </p>
+            <div class="project-list">
+                <div class="project">
+                    <img src="https://via.placeholder.com/300x150" alt="Project Image">
+                    <h3>Project Name 1</h3>
+                    <p>Brief description of the project.</p>
+                    <a href="https://github.com/your-username/project-1">View Code</a>
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/300x150" alt="Project Image">
+                    <h3>Project Name 2</h3>
+                    <p>Brief description of the project.</p>
+                    <a href="https://github.com/your-username/project-2">View Code</a>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Provide your contact information, such as email address, social media links, or a contact form.
+            </p>
+            <p>Email: your.email@example.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile">Your LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/your-username">Your GitHub Profile</a></p>
+            <!-- Add other contact methods as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Your Name. All rights reserved.</p>
+        <p><a href="https://github.com/your-username"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Add other social media icons as needed -->
+        </p>
+    </footer>
 
 </body>
+
 </html>
